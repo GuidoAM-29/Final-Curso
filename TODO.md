@@ -1,0 +1,2 @@
+- [ ] Edit CompInicio.jsx to add navigation links to buttons
+- [ ] Test the navigation

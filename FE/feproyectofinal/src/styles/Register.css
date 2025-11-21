@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; 
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #2e7d32; 
+}
+
+
+.R-Container {
+  background: rgba(255, 255, 255, 0.95); 
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out; 
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.logo-heart {
+  font-size: 4rem; 
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease-in-out 0.2s both; 
+}
+
+.registro-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: lch(36.6% 23.87 232.56); 
+  animation: fadeIn 1.5s ease-in-out 0.4s both;
+}
+
+
+.registro-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #246360; 
+  animation: fadeIn 1.5s ease-in-out 0.6s both;
+}
+
+
+.welcome-message {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2e577d;
+  animation: fadeIn 1.5s ease-in-out 0.8s both;
+}
+
+
+.welcome-description {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #38538e;
+  animation: fadeIn 1.5s ease-in-out 1s both;
+}
+
+
+.registro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+
+.registro-input,
+.registro-select {
+  padding: 15px;
+  border: 2px solid #c8e6c9; 
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f1f8e9; 
+  color: #0f192e;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+  animation: fadeIn 1.5s ease-in-out 1.2s both;
+}
+
+
+
+
+.registro-input::placeholder,
+.registro-select option {
+  color: #00215e; 
+}
+
+
+.registro-button {
+  padding: 15px;
+  background: linear-gradient(135deg, #012452 0%, #000000 100%); 
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  animation: fadeIn 1.5s ease-in-out 1.4s both;
+}
+
+.registro-button:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 5px 15px rgba(76, 122, 175, 0.4); 
+}
+
+.registro-button:active {
+  transform: scale(0.98); 
+}
+
+@media (max-width: 600px) {
+  .R-Container {
+    padding: 20px;
+    margin: 20px;
+  }
+  .registro-title {
+    font-size: 2rem;
+  }
+  .welcome-message {
+    font-size: 1.5rem;
+  }
+}

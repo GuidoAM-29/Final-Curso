@@ -1,0 +1,45 @@
+.Container-CONS {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f4f8fd; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  color: #121212; 
+  margin-bottom: 8px;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #10197d; 
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  color: #666666; 
+  margin-bottom: 24px;
+}
+
+.btn-add-tip {
+  background-color: #10197d;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-tip:hover {
+  background-color: #3840c3; 
+}

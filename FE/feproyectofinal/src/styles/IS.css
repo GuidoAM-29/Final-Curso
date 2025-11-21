@@ -1,0 +1,166 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; /* Fuente legible; puedes cambiar a 'Open Sans' para más calidez */
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); /* Gradiente verde suave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #2e7d32; 
+}
+
+.IS-Container {
+  background: rgba(255, 255, 255, 0.95); /* Blanco semi-transparente */
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo del corazón */
+.logo-heart {
+  font-size: 4rem; /* Grande para impacto emocional */
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease-in-out 0.2s both; /* Retraso para entrada secuencial */
+}
+
+/* Título de login */
+.login-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #388e3c; /* Verde vibrante */
+  animation: fadeIn 1.5s ease-in-out 0.4s both;
+}
+
+/* Subtítulo */
+.login-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #4caf50; /* Verde medio */
+  animation: fadeIn 1.5s ease-in-out 0.6s both;
+}
+
+/* Formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaciado cómodo */
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.login-input {
+  padding: 15px;
+  border: 2px solid #c8e6c9; /* Borde verde suave */
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f1f8e9; /* Fondo verde claro */
+  color: #2e7d32;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  animation: fadeIn 1.5s ease-in-out 0.8s both;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #4caf50; /* Verde intenso al enfocar */
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3); /* Sombra verde sutil */
+}
+
+/* Placeholder styling */
+.login-input::placeholder {
+  color: #66bb6a; /* Verde claro */
+}
+
+/* Botón de iniciar sesión */
+.login-button {
+  padding: 15px;
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%); /* Gradiente verde */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación de hover */
+  animation: fadeIn 1.5s ease-in-out 1s both;
+}
+
+.login-button:hover {
+  transform: scale(1.05); /* Escala ligera */
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4); /* Sombra verde */
+}
+
+.login-button:active {
+  transform: scale(0.98); /* Efecto de clic */
+}
+
+/* Divisor */
+.divider {
+  height: 1px;
+  background: #c8e6c9; /* Línea verde suave */
+  margin: 20px 0;
+  animation: fadeIn 1.5s ease-in-out 1.2s both;
+}
+
+
+.register-button {
+  padding: 15px;
+  background: transparent; /* Transparente para estilo secundario */
+  color: #388e3c;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animación de hover */
+  animation: fadeIn 1.5s ease-in-out 1.4s both;
+}
+
+.register-button:hover {
+  transform: scale(1.05);
+  background-color: #e8f5e8; /* Fondo verde claro al hover */
+}
+
+/* Enlace de contraseña olvidada */
+.forgot-password {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #66bb6a;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out 1.6s both;
+}
+
+.forgot-password:hover {
+  color: #388e3c; /* Cambio de color al hover */
+}
+
+/* Responsividad básica */
+@media (max-width: 600px) {
+  .IS-Container {
+    padding: 20px;
+    margin: 20px;
+  }
+  .login-title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,139 @@
+/* Fondo degradado suave verde claro */
+.edit-profile {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d9f2e6 0%, #a4d8b2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Caja blanca con sombra suave y bordes redondeados */
+.edit-profile > div, /* considerando que tu contenido está dentro del div principal */
+.profile-form {
+  background-color: #ffffff1f;
+  padding: 32px 28px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.edit-profile header {
+  display: block; /* Cambiar de flex a bloque */
+  text-align: left;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.edit-profile h1 {
+  margin: 0 0 14px 0; /* Separación abajo para que no quede pegado */
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #255a57;
+}
+
+/* Si quieres los botones arriba pero separados, puedes hacer algo así: */
+.menu-button, .save-button {
+  position: absolute;
+  top: 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #255a57;
+  cursor: pointer;
+}
+
+.menu-button {
+  left: 0;
+}
+
+.save-button {
+  right: 0;
+}
+
+/* Foto perfil centrada */
+.profile-photo-section {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.change-photo-button {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  color: #255a57;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* Formulario */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  color: #255a57;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  padding: 10px 12px;
+  border: 1.8px solid #c7e3d9;
+  border-radius: 10px;
+  background-color: #ecf9f4;
+  font-size: 1rem;
+  color: #255a57;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+select:invalid {
+  font-style: italic;
+  color: #a4d8b2;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: #58b983;
+}
+
+/* Select con color ajustado */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg fill='%23255a57' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+/* Ajustes para inputs con value controlado y sin que sean editables sin onChange */
+/* Opcional: para evitar advertencia React, agrega onChange vacío o controla inputs */
+
