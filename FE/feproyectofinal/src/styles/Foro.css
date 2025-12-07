@@ -50,7 +50,7 @@ body {
 }
 
 .new-post-button:hover {
-  background-color: #1b3551; 
+  background-color: #1b3551;
 }
 
 .empty-publications {
@@ -63,4 +63,126 @@ body {
   width: 90px;
   margin-bottom: 10px;
   opacity: 0.7;
+}
+
+/* Estilos para la lista de publicaciones */
+.publicaciones-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre publicaciones */
+  justify-content: center; /* Centrar las tarjetas */
+  max-width: 1200px; /* Ancho máximo para múltiples tarjetas */
+  margin: 0 auto; /* Centrar la lista */
+}
+
+/* Estilos para cada publicación (tipo tarjeta de redes sociales) */
+.post-item {
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #e0e0e0; /* Borde sutil */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  cursor: pointer; /* Cursor pointer para indicar interactividad */
+  width: 350px; /* Ancho fijo para tarjetas horizontales */
+  flex-shrink: 0; /* Evitar que se encojan */
+}
+
+.post-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hover */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #001f3f;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.post-content {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.post-category {
+  font-size: 12px;
+  color: #264866;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.post-date {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+
+.responder-button {
+  background-color: #264866;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.responder-button:hover {
+  background-color: #1b3551;
+}
+
+/* Estilos para el contenedor principal del foro */
+.foro-container {
+  max-width: 900px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar */
+  padding: 20px;
+}
+
+/* Estilos para los botones de categorías */
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.category-button {
+  background-color: #264866; /* Azul marino */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-button:hover {
+  background-color: #1b3551; /* Azul marino más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-button.active {
+  background-color: #ffffff;
+  color: #264866;
+  border: 2px solid #264866;
+}
+
+.category-button.active:hover {
+  background-color: #f0f0f0;
+  color: #1b3551;
 }

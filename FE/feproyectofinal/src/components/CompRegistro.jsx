@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import "../styles/Register.CSS"
 import { postData } from '../services/fetch'
 
 
 function CompRegistro() {
+  const navigate = useNavigate()
   const [username,setUsername] = useState('')
   const [password,setPassword] = useState('')
   const [age, setAge] = useState('')
@@ -27,6 +29,7 @@ function CompRegistro() {
     }
     const data = await postData('usuarios/crear-usuario/',objUsuario)
     console.log(data);
+    navigate('/Principal')
     
   }
   return (

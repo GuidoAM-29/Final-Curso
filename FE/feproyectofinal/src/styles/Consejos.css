@@ -1,45 +1,174 @@
-.Container-CONS {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f4f8fd; 
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
+/* styles.css */
+.container-cons {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f9fafb, #e5e7eb);
+  padding: 3rem 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .title {
-  font-weight: 700;
-  font-size: 28px;
-  color: #121212; 
-  margin-bottom: 8px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 1rem;
 }
 
-.highlight {
-  font-weight: 700;
-  color: #10197d; 
+.title .highlight {
+  color: #3355ea;
 }
 
 .subtitle {
-  font-weight: 400;
-  font-size: 16px;
-  color: #666666; 
-  margin-bottom: 24px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
 }
 
 .btn-add-tip {
-  background-color: #10197d;
-  border: none;
+  display: block;
+  margin: 0 auto 3rem;
+  background: #3364ea;
   color: white;
   font-weight: 600;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  box-shadow: 0 10px 20px rgba(245, 245, 245, 0.3);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.2s;
 }
 
 .btn-add-tip:hover {
-  background-color: #3840c3; 
+  background: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s;
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+
+.icon-ansiedad { background: #f3e8ff; }
+.icon-estres { background: #dbeafe; }
+
+.tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.tag-ansiedad { background: #9333ea; }
+.tag-estres { background: #2563eb; }
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.card a {
+  color: #9333ea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: #7c3aed;
+}
+
+/* Recursos section */
+.recursos-section {
+  margin-top: 3rem;
+}
+
+.recursos-section h2 {
+  text-align: center;
+  color: #1f2937;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.recursos-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recurso-item {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 2rem;
+  transition: all 0.3s;
+}
+
+.recurso-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.recurso-item h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.recurso-item p {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.recurso-item strong {
+  color: #1f2937;
+}
+
+.recurso-item a {
+  color: #3364ea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.recurso-item a:hover {
+  color: #7c3aed;
+  text-decoration: underline;
 }

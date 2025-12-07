@@ -1,0 +1,65 @@
+
+.publicacion-foro-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #e8f0fe;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.publicacion-foro-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #001f3f;
+}
+
+.publicacion-foro-form input[type="text"],
+.publicacion-foro-form select,
+.publicacion-foro-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #b0c4de;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publicacion-foro-form input[type="text"]:focus,
+.publicacion-foro-form select:focus,
+.publicacion-foro-form textarea:focus {
+  border-color: #001f3f; 
+  box-shadow: 0 0 8px rgba(0, 31, 63, 0.5);
+  outline: none;
+}
+
+.publicacion-foro-form textarea {
+  resize: vertical;
+}
+
+.publicacion-foro-form ::placeholder {
+  color: #668;
+}
+
+
+.publicacion-foro-form .submit-button {
+  background-color: #001f3f; 
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.publicacion-foro-form .submit-button:hover {
+  background-color: #003366; /* Darker navy */
+}

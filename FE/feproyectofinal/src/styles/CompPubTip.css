@@ -1,0 +1,97 @@
+/* Fondo general */
+body {
+  background: linear-gradient(to bottom right, #d4f3e9, #b2e2d6);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor del formulario */
+.comp-pub-tip-form {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas */
+.comp-pub-tip-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs y textarea */
+.comp-pub-tip-form input[type='text'],
+.comp-pub-tip-form input[type='url'],
+.comp-pub-tip-form textarea,
+.comp-pub-tip-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8fc;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.comp-pub-tip-form input:focus,
+.comp-pub-tip-form textarea:focus,
+.comp-pub-tip-form select:focus {
+  border-color: #6ac7b9;
+  outline: none;
+}
+
+/* Botón de envío */
+.submit-button {
+  background-color: #6ac7b9;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #4fb2a3;
+}
+
+/* Lista de recursos */
+.recursos-list {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+.recurso-item {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.recurso-item h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.recurso-item p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.recurso-item a {
+  color: #6ac7b9;
+  text-decoration: none;
+}
+
+.recurso-item a:hover {
+  text-decoration: underline;
+}

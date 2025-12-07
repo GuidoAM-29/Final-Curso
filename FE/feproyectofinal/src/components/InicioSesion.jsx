@@ -19,9 +19,10 @@ function InicioSesion() {
     }
     const data = await postData('usuarios/login-usuario/',objUsuario)
     console.log(data);
+    localStorage.setItem("token",data.token)
     if (data.mensaje != 'El usuario no existe') {
       localStorage.setItem("id_usuario",data.id_usuario)
-      navigate('/Usuario')
+      navigate('/Principal')
     }
     
   }
@@ -56,7 +57,7 @@ function InicioSesion() {
       <div className="divider" />
       <button
         onClick={()=>{
-          navigate("/aaaaa")
+          navigate("/")
         }}
       className="register-button">Crear nueva cuenta</button>
       

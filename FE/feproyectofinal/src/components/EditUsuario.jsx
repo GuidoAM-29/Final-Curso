@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import "../styles/Usuario.css";
-import { getData } from "../services/fetch";
+import { getData, getDataAutenticado } from "../services/fetch";
 function EditUsuario() {
   const [usuario,setUsuario] = useState([])
 
   useEffect(()=>{
     async function traerUsuario() {
-      const peticion = await getData(`usuarios/usuario-por-id/${localStorage.getItem("id_usuario")}/`)
+      const peticion = await getDataAutenticado(`usuarios/usuario-por-id/${localStorage.getItem("id_usuario")}/`)
       setUsuario(peticion[0])
     }
     traerUsuario()

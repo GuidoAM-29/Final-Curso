@@ -5,6 +5,8 @@ from rest_framework.generics import ListCreateAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.contrib.auth import authenticate
+from rest_framework_simplejwt.tokens import RefreshToken  
+from rest_framework.permissions import IsAuthenticated as isAuthenticated
 
 class UsuarioCreateView(ListCreateAPIView):
     queryset = Usuario.objects.all()
@@ -19,18 +21,20 @@ class UsuarioLoginView(APIView):
         usuario = authenticate(username=nombre_usuario,password=clave_usuario)
 
         if usuario is not None:
-            return Response({"mensaje":"El usuario existe","id_usuario":usuario.id})
+            access_token = RefreshToken.for_user(usuario).access_token
+            return Response({"mensaje":"El usuario existe","id_usuario":usuario.id,"token":str(access_token)})
         else:
             return Response({"mensaje":"El usuario no existe"})
 
 class UsuarioPorIdView(ListCreateAPIView):
     serializer_class = UsuarioSerializer
-
+    permission_classes = [isAuthenticated]
     def get_queryset(self):
         id_usuario = self.kwargs["id_usuario"] 
         return Usuario.objects.filter(id=id_usuario)
     
 class EditarUsuarioView(APIView):
+    permission_classes = [isAuthenticated]
     def patch(self,request):
         id_usuario  =request.data.get("id_usuario")
         nombre_usuario = request.data.get("username")

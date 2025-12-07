@@ -1,8 +1,11 @@
 import React from 'react'
+import CompMain from '../components/CompMain'
 
 function Main() {
   return (
-    <div>Main</div>
+    <div>
+       <CompMain/>
+    </div>
   )
 }
 
