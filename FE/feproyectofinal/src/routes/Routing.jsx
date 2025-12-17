@@ -11,7 +11,12 @@ import CompMain from '../components/CompMain.jsx'
 import CompPubTip from '../components/CompPubTip.jsx'
 import CompPsicologosPage from '../components/CompPsicologosPage.jsx'
 import CompRespuestaForo from '../components/CompRespuestaForo.jsx'
-import AdminPage from '../components/AdminPage.jsx'
+import AdminPage from '../components/CompAdminPage.jsx'
+import CompAñadirPsicologos from '../components/CompAñadirPsicologos.jsx'
+import AgendarPagina from '../pages/AgendarPagina.jsx'
+import CompCitas from '../components/CompCitas.jsx'
+import CompRespPubForo from '../components/CompRespPubForo.jsx'
+
 function Routing() {
   return (
     <Router>
@@ -28,6 +33,10 @@ function Routing() {
         <Route path='/Profesionales' element={<CompPsicologosPage/>}/>
         <Route path='/Respuesta' element={<CompRespuestaForo/>}/>
         <Route path='/Administración' element={<AdminPage/>}/>
+        <Route path='/Psicologos' element={<CompAñadirPsicologos/>}/>
+        <Route path='/Agendar' element={<AgendarPagina/>}/>
+        <Route path='/Citas' element={<CompCitas/>}/>
+        <Route path='/Respuesta Publicacion' element={<CompRespPubForo/>}/>
 
 
 

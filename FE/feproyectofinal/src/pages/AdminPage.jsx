@@ -1,9 +1,11 @@
-import React from 'react'
+import CompAdminPage from '../components/CompAdminPage'
+import Header from '../components/Header'
 
 function AdminPage() {
   return (
     <div>
-        <AdminPage/>
+        <Header />
+        <CompAdminPage/>
     </div>
   )
 }

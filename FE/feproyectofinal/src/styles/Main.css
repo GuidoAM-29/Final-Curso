@@ -2,10 +2,30 @@
 
 .main-container {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background: linear-gradient(90deg, #f9f9f9, #d0e0f0, #b0d0e0, #d0e0f0, #f9f9f9);
+  background-size: 300% 300%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  animation: waterFlow 10s ease-in-out infinite;
+}
+
+@keyframes waterFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Header */
@@ -20,22 +40,61 @@
   z-index: 1;
 }
 
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #5dade2;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #5dade2;
+  color: #ffffff;
+}
+
 .header h1 {
   font-size: 1.5rem;
   color: #333;
 }
 
-.logout-button {
-  background-color: #007bff;
+.edit-profile-button {
+  background-color: #5dade2;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-profile-button:hover {
+  background-color: #4a90e2;
+  transform: scale(1.05);
+}
+
+.logout-button {
+  background-color: #5dade2;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .logout-button:hover {
-  background-color: #0056b3;
+  background-color: #4a90e2;
+  transform: scale(1.05);
 }
 
 /* Main Panel */
@@ -58,10 +117,15 @@
 }
 
 /* Sections */
-.section-community-professionals,
-.section-resources-support {
+.section-community-professionals {
   display: flex;
   gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-resources-support {
+  display: flex;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
@@ -74,6 +138,15 @@
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.community-forum:hover,
+.professionals-panel:hover,
+.resources-tips:hover,
+.specialized-support:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .community-forum h3,
@@ -81,7 +154,7 @@
 .resources-tips h3,
 .specialized-support h3 {
   margin-bottom: 0.5rem;
-  color: #007bff;
+  color: #5dade2;
 }
 
 .community-forum p,
@@ -96,15 +169,17 @@
 .professionals-panel a,
 .resources-tips a,
 .specialized-support a {
-  color: #007bff;
+  color: #5dade2;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .community-forum a:hover,
 .professionals-panel a:hover,
 .resources-tips a:hover,
 .specialized-support a:hover {
+  color: #4a90e2;
   text-decoration: underline;
 }
 
@@ -115,15 +190,17 @@
 }
 
 .appointments-button button {
-  background-color: #007bff;
+  background-color: #5dade2;
   color: #fff;
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .appointments-button button:hover {
-  background-color: #0056b3;
+  background-color: #4a90e2;
+  transform: scale(1.05);
 }

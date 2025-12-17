@@ -1,0 +1,47 @@
+/* Citas.css */
+
+.citas {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.citas h1 {
+  font-size: 24px;
+  color: #001f3f; /* Navy blue */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.citas-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cita-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.cita-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.cita-item p {
+  margin: 8px 0;
+  color: #001f3f; /* Navy blue text */
+  font-size: 14px;
+}

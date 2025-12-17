@@ -6,7 +6,7 @@ function Consejos() {
     <div>
       <CompConsejos/>
 
-      
+
     </div>
   )
 }

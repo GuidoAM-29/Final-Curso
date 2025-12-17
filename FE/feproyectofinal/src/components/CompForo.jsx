@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../styles/Foro.CSS"
 
 
@@ -29,6 +29,11 @@ function CompForo({publicaciones}) {
           <strong>Foro Comunitario</strong>
         </div>
       </header>
+      <nav className="foro-navbar">
+        <Link to="/consejos" className="navbar-link">Recursos y Consejos</Link>
+        <Link to="/Principal" className="navbar-link">Principal</Link>
+        <Link to="/Profesionales" className="navbar-link">Psicologos</Link>
+      </nav>
       <div className="new-post-button-container">
         <button className="new-post-button" onClick={handleNuevaPublicacion}>✍️ Nueva Publicación</button>
       </div>
@@ -55,7 +60,10 @@ function CompForo({publicaciones}) {
             <p className="post-content">{post.contenido_digamos}</p>
             <p className="post-category">{post.categoria}</p>
             <p className="post-date">{formatearFecha(post.fecha_publicacion)}</p>
-            <button className="responder-button" onClick={() => navigate(`/responder/${post.id}`)}>Responder</button>
+            <button className="responder-button" onClick={() => {
+              navigate('/Respuesta Publicacion')
+              localStorage.setItem("idPublicaicon",post.id)
+              }}>Responder</button>
           </div>
         ))}
       </div>

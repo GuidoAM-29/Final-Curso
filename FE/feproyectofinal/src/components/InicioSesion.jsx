@@ -20,6 +20,7 @@ function InicioSesion() {
     const data = await postData('usuarios/login-usuario/',objUsuario)
     console.log(data);
     localStorage.setItem("token",data.token)
+    localStorage.setItem("rol",data.rol)
     if (data.mensaje != 'El usuario no existe') {
       localStorage.setItem("id_usuario",data.id_usuario)
       navigate('/Principal')

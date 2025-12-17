@@ -1,18 +1,25 @@
-import React from 'react'
+import { useEffect, useState } from "react"
 import "../styles/CompPsicologosPage.css"
+import CardDoctor from './CardDoctor'
+import { getData, getDataAutenticado } from "../services/fetch"
+import ListCardDoctor from "./ListCardDoctor"
 
 
 function CompPsicologosPage() {
+  const [psicologos,setPsicologos] = useState([])
+
+  useEffect(()=>{
+    async function traerPsicologos() {
+      const peticion = await getData("usuarios/crear-usuario/")
+      const filtroPsicologos = peticion.filter((psico)=>psico.rol=="Psicologo")
+      setPsicologos(filtroPsicologos)
+    }
+    traerPsicologos()
+  },[])
   return (
-    <div className='comp-psicologos-page'>
-      <h1>Encuentra el Apoyo que Necesitas</h1>
-      <p>Conecta con psicólogos profesionales y voluntarios certificados</p>
-
-      <div className="boton-container">
-        <button>Añadir psicólogos</button>
-      </div>
-
-    </div>
+    <>
+    <ListCardDoctor lista={psicologos}/>
+    </>
   )
 }
 

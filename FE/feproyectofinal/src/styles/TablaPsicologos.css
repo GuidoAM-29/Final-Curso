@@ -1,0 +1,56 @@
+.tabla-usuarios {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.tabla-usuarios table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-usuarios thead {
+  background-color: #000080; /* Navy blue */
+  color: white;
+}
+
+.tabla-usuarios th {
+  padding: 12px;
+  font-weight: bold;
+}
+
+.tabla-usuarios td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-usuarios tbody tr:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.rol-select {
+  padding: 8px 12px;
+  border: 2px solid #000080; /* Navy blue border */
+  border-radius: 4px;
+  background-color: white;
+  color: #000080; /* Navy blue text */
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rol-select:hover {
+  background-color: #000080; /* Navy blue background on hover */
+  color: white;
+  transform: scale(1.05);
+}
+
+.rol-select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 128, 0.5);
+}

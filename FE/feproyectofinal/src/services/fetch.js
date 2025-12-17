@@ -73,4 +73,41 @@ async function getDataAutenticado(endpoint) {
   
 }
 
-export {getData,postData,getDataAutenticado};
+async function deleteDataAutenticado(endpoint) {
+    try {
+        const peticion = await fetch(`http://127.0.0.1:8000/${endpoint}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem("token")}`
+            }
+        });
+        if (peticion.status === 204) {
+            return {};
+        }
+        const data = await peticion.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function patchDataAutenticado(endpoint,obj) {
+    try {
+        const peticion = await fetch(`http://127.0.0.1:8000/${endpoint}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem("token")}`
+            },
+            body: JSON.stringify(obj)
+        });
+        const data = await peticion.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error(error);
+    }
+}
+export {getData,postData,getDataAutenticado,deleteDataAutenticado,patchDataAutenticado};

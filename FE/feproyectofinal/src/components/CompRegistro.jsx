@@ -23,7 +23,7 @@ function CompRegistro() {
     edad: age,
        password: password,
       genero: gender,
-      rol: role,
+      rol: "usuario",
       num_cedula: cedula,
       email:correo
     }
@@ -67,12 +67,6 @@ function CompRegistro() {
           <option value="Masculino">Masculino</option>
           <option value="Femenino">Femenino</option>
           <option value="OTRO">Otro</option>
-        </select>
-        <select name="role" className="registro-select" required onChange={(e)=>setRole(e.target.value)}>
-          <option value="" disabled selected>Rol</option>
-          <option value="Usuario">Usuario</option>
-          <option value="Psicologo">Psicólogo</option>
-          <option value="Admin">Administrador</option>
         </select>
 
         <input 

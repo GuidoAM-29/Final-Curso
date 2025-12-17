@@ -28,6 +28,33 @@ body {
   color: #001f3f;
 }
 
+/* Estilos para el navbar */
+.foro-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  background-color: #264866; /* Azul marino */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #ffffff; /* Blanco para contraste */
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #1b3551; /* Azul marino más oscuro */
+  color: #ffffff;
+}
+
 .foro-icon {
   width: 28px;
   height: 28px;

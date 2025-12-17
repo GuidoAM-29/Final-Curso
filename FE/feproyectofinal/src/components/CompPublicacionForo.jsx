@@ -52,6 +52,8 @@ function CompPublicacionForo() {
         <option value="Ansiedad">Ansiedad</option>
         <option value="Depresión">Depresión</option>
         <option value="Estrés">Estrés</option>
+        <option value="Casos Especiales">Casos Especiales</option>
+        <option value="Otros">Otros</option>
       </select>
 
       <label htmlFor="contenido">Contenido</label>

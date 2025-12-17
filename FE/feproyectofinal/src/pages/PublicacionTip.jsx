@@ -4,7 +4,7 @@ import CompPubTip from '../components/CompPubTip'
 function PublicacionTip() {
   return (
     <div>
-         <CompPubTip/> 
+         <CompPubTip/>
     </div>
   )
 }

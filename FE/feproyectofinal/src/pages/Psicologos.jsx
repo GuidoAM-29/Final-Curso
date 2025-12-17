@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../components/Header'
 
 function Psicologos() {
   return (
-    <div>Psicologos</div>
+    <div>
+      <Header />
+      Psicologos
+    </div>
   )
 }
 

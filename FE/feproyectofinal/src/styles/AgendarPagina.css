@@ -1,0 +1,48 @@
+.agenda-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+}
+
+.agenda-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.agenda-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+}
+
+.input-calendar,
+.input-hour {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.btn-agendar {
+  margin-top: 10px;
+  padding: 12px;
+  background: #4f46e5;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-agendar:hover {
+  background: #4338ca;
+}

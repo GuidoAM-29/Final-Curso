@@ -7,6 +7,12 @@ class Publicacion(models.Model):
     titulo = models.CharField(max_length=100)
     categoria = models.CharField(max_length=100)
 
+class RespuestaPublicacion(models.Model):
+    fecha_respuesta = models.DateTimeField(auto_now_add=True)
+    contenido_respuesta = models.CharField(max_length=250)
+    usuario = models.ForeignKey("usuarios.Usuario",on_delete=models.CASCADE)
+    publicacion = models.ForeignKey(Publicacion,on_delete=models.CASCADE)
+
 class Tip(models.Model):
     categoria = models.CharField(max_length=100)
     fecha_publicacion = models.DateTimeField(auto_now_add=True)

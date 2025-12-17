@@ -5,11 +5,21 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from .models import Recursos
 from .serializers import RecursosSerializer
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+from rest_framework.generics import DestroyAPIView
 
 class PublicacionCreateView(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     queryset = Publicacion.objects.all()
     serializer_class = PublicacionSerializer
+
+from .serializers import RespuestaPublicacionSerializer
+from .models import RespuestaPublicacion
+
+class RespuestaPublicacionCreateView(ListCreateAPIView):
+    # permission_classes = [IsAuthenticated]
+    queryset = RespuestaPublicacion.objects.all()
+    serializer_class = RespuestaPublicacionSerializer
 
 class PublicacionRetrieveView(RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
@@ -33,3 +43,13 @@ class RespuestaTipRetrieveView(RetrieveUpdateDestroyAPIView):
 class RecursosCreateView(ListCreateAPIView):
     queryset = Recursos.objects.all()
     serializer_class = RecursosSerializer
+
+class EliminarRecurso(DestroyAPIView):
+    queryset = Recursos.objects.all()
+    serializer_class = RecursosSerializer
+    lookup_field = 'id'
+
+class EliminarPublicacion(RetrieveUpdateDestroyAPIView):
+    queryset = Publicacion.objects.all()
+    serializer_class = PublicacionSerializer
+    lookup_field = 'id'
